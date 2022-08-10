@@ -1,0 +1,35 @@
+# agent params
+epochs: 25
+batch_size: 32
+alpha: 0.0003
+expl_del: 0.05
+exploration_mins: 180
+window: 2
+
+# mppi params
+init_var: 0.25
+max_iters: 5
+epsilon: 0.001
+elites: 0.2
+momentum: 0.1
+temperature: 0.5
+
+# model params
+hidden_dim: 200
+mu_lower: -1
+mu_upper: 1
+
+# trajectory sampling
+particles: 20
+horizon: 20
+population: 25
+
+# rewards
+low_temp_goal: 19
+high_temp_goal: 24
+theta: 1000
+
+# misc
+name: 'pearl'
+models_dir: '../tmp/model_testing'
+deterministic: False

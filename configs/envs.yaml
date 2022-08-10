@@ -1,0 +1,177 @@
+MixedUse:
+    env_name: 'MixedUseFanFCU-v0'
+    redundant_observations: [
+        'time',
+        'Bd_Pw_All',  # building power consumption
+        'Bd_Pw_chiller',  # chiller power consumption
+        'Bd_Pw_coil',  # heating coil power consumption
+        'Bd_Pw_cooling_AHU2',  # AHU 2 cooling power
+        'Bd_Pw_cooling_HP',  # heat pump cooling power
+        'Bd_Pw_heating_HP',  # heat pump heating power
+        'Fa_Pw_HVAC'  # hvac power consumption
+    ]
+
+    redundant_actions: []  # no redundant actions for this environment
+
+    discrete_actions: [] # no discrete actions for this environment
+
+    continuous_actions: [
+        'Z02_T_Thermostat_sp',
+        'Z03_T_Thermostat_sp',
+        'Z04_T_Thermostat_sp',
+        'Z05_T_Thermostat_sp',
+        'Z08_T_Thermostat_sp',
+        'Z09_T_Thermostat_sp',
+        'Z10_T_Thermostat_sp',
+        'Z11_T_Thermostat_sp',
+        'Bd_Fl_AHU1_sp',
+        'Bd_Fl_AHU2_sp',
+        'Bd_T_AHU1_sp',
+        'Bd_T_AHU2_sp'
+    ]
+
+    temp_reward: [
+        'Z02_T',  # zone 2 temperature
+        'Z03_T',  # zone 3 temperature
+        'Z04_T',  # zone 4 temperature
+        'Z05_T',  # zone 5 temperature
+        'Z08_T',  # zone 8 temperature
+        'Z09_T',  # zone 9 temperature
+        'Z10_T',  # zone 10 temperature
+        'Z11_T',  # zone 11 temperature
+    ]
+
+    energy_reward: 'Fa_Pw_All'
+    c02_reward: 'c02'
+    c02_path: 'configs/c02_data/greece_2017_c02_intensity_15min.pkl'
+    weather: "GRC_A_Athens"
+    mins_per_step: 15
+    steps_per_day: 96
+    days: 11
+    time_dim: 4
+
+Offices:
+    env_name: 'OfficesThermostat-v0'
+    redundant_observations: [
+        'time',
+        'Bd_Pw_All',  # building power consumption
+        'Fa_Pw_PV',  # PV power production
+        'Fa_Pw_HVAC',  # hvac power consumption
+    ]
+
+    redundant_actions: []  # no redundant actions for this environment
+
+    discrete_actions: [
+        'Bd_Cooling_onoff_sp',
+        'Bd_Heating_onoff_sp'
+    ]
+
+    continuous_actions: [
+        'Z01_T_Thermostat_sp',
+        'Z02_T_Thermostat_sp',
+        'Z03_T_Thermostat_sp',
+        'Z04_T_Thermostat_sp',
+        'Z05_T_Thermostat_sp',
+        'Z06_T_Thermostat_sp',
+        'Z07_T_Thermostat_sp',
+        'Z15_T_Thermostat_sp',
+        'Z16_T_Thermostat_sp',
+        'Z17_T_Thermostat_sp',
+        'Z18_T_Thermostat_sp',
+        'Z19_T_Thermostat_sp',
+        'Z20_T_Thermostat_sp',
+        'Z25_T_Thermostat_sp',
+    ]
+
+    temp_reward: [
+        'Z01_T',
+        'Z02_T',
+        'Z03_T',
+        'Z04_T',
+        'Z05_T',
+        'Z06_T',
+        'Z07_T',
+        'Z15_T',
+        'Z16_T',
+        'Z17_T',
+        'Z18_T',
+        'Z19_T',
+        'Z20_T',
+        'Z25_T',
+    ]
+
+    energy_reward: 'Fa_Pw_All'  # total power consumption
+    c02_reward: 'c02'
+    c02_path: 'configs/c02_data/greece_2017_c02_intensity_15min.pkl'
+    weather: "GRC_A_Athens"
+    mins_per_step: 15
+    steps_per_day: 96
+    days: 12
+    time_dim: 4
+
+SeminarcenterThermal:
+    env_name: 'SeminarcenterThermostat-v0'
+    redundant_observations: [
+        'time',
+        'Bd_Pw_boiler',
+        'Bd_Pw_prod',
+        'Bd_T_Boiler_sp_out',
+        'Bd_CO2',
+        'Bd_Pw_All',
+        'Fa_Pw_Pur',
+        'Fa_Pw_HVAC',
+    ]
+
+    redundant_actions: 'Grid_CO2_sp'
+
+    discrete_actions: []
+
+    continuous_actions: [
+        'Z01_T_Thermostat_sp',
+        'Z02_T_Thermostat_sp',
+        'Z03_T_Thermostat_sp',
+        'Z04_T_Thermostat_sp',
+        'Z05_T_Thermostat_sp',
+        'Z06_T_Thermostat_sp',
+        'Z08_T_Thermostat_sp',
+        'Z09_T_Thermostat_sp',
+        'Z10_T_Thermostat_sp',
+        'Z11_T_Thermostat_sp',
+        'Z13_T_Thermostat_sp',
+        'Z14_T_Thermostat_sp',
+        'Z15_T_Thermostat_sp',
+        'Z18_T_Thermostat_sp',
+        'Z19_T_Thermostat_sp',
+        'Z20_T_Thermostat_sp',
+        'Z21_T_Thermostat_sp',
+        'Z22_T_Thermostat_sp'
+    ]
+
+    temp_reward: [
+        'Z01_T',  # zone 1 temperature
+        'Z02_T',  # zone 2 temperature
+        'Z03_T',  # zone 3 temperature
+        'Z04_T',  # zone 4 temperature
+        'Z05_T',  # zone 5 temperature
+        'Z06_T',  # zone 6 temperature
+        'Z08_T',  # zone 8 temperature
+        'Z09_T',  # zone 9 temperature
+        'Z10_T',  # zone 10 temperature
+        'Z11_T',  # zone 11 temperature
+        'Z13_T',  # zone 13 temperature
+        'Z14_T',  # zone 14 temperature
+        'Z15_T',  # zone 15 temperature
+        'Z18_T',  # zone 18 temperature
+        'Z19_T',  # zone 19 temperature
+        'Z20_T',  # zone 20 temperature
+        'Z21_T',  # zone 21 temperature
+        'Z22_T',  # zone 22 temperature
+    ]
+
+    energy_reward: 'Fa_Pw_All' # building power consumption
+    c02_reward: 'Grid_CO2'
+    weather: "DNK_MJ_Horsens1"
+    mins_per_step: 10
+    steps_per_day: 144
+    days: 35
+    time_dim: 4
