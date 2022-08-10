@@ -10,19 +10,20 @@ and [Jonathan M. Cullen](http://www.eng.cam.ac.uk/profiles/jmc99) (2022).
 </p>
 
 ## Method
-
-PEARL combines ideas from system identification and model-based RL to find emission-reducing control policies zero-shot, that, is
+PEARL combines ideas from system identification and model-based RL to find emission-reducing control policies zero-shot, that is,
 without access to a simulator or historical data _a priori_. In experiments across three varied building energy simulations, we
 show PEARL outperforms an existing RBC once, and popular RL baselines in all cases, reducing building emissions by as
 much as 31% whilst maintaining thermal comfort
 
 <figure>
+<p align="center">
   <img src='/media/emissions.jpg' width="600"/>
     <figcaption> Top: Cumulative emissions produced by all agents across the (a) Mixed Use, (b) Offices, and (c) Seminar Centre
 environments. Curves represent the mean of 3 runs of the experiment, shaded areas are one standard deviation (too small to see
 in all cases except PPO). Bottom: Mean daily building temperature produced by all agents, the green shaded area illustrates the
 target temperature range [19, 24]. </figcaption>
 </figure>
+
 
 ## Installation
 First you'll need to install [Energym](https://github.com/bsl546/energym) for running the building energy simulations atop
