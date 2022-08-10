@@ -27,7 +27,7 @@ target temperature range [19, 24]. </figcaption>
 
 ## Installation
 First you'll need to install [Energym](https://github.com/bsl546/energym) for running the building energy simulations atop
- _EnergyPlus_. There full installation instructions can be found on their website [here](https://bsl546.github.io/energym-pages/sources/install_min.html).
+ _EnergyPlus_. The full installation instructions can be found on their website [here](https://bsl546.github.io/energym-pages/sources/install_min.html).
 
 Then you can install the required dependencies vai `conda`:
 ```commandline
@@ -45,7 +45,7 @@ If you found this work useful, or you use this project to inform your own resear
 @article{jeen2022,
   url = {https://arxiv.org/abs/2206.14191},
   author = {Jeen, Scott R. and Cullen, Jonathan M.},  
-  title = {Zero-Shot Building Control},
+  title = {Low Emissiong Building Control with Zero Shot Reinforcement Learning},
   publisher = {arXiv},
   year = {2022},
 }
