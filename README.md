@@ -5,7 +5,7 @@ by [Scott R. Jeen](https://enjeeneer.io), [Alessandro Abate](https://www.cs.ox.a
 and [Jonathan M. Cullen](http://www.eng.cam.ac.uk/profiles/jmc99) (2022).
 
 <p align="center">
-  <br><img src='/media/pearl.png' width="600"/><br>
+  <br><img src='/media/pearl.png' width="900"/><br>
    <a href="https://arxiv.org/abs/2206.14191">[Paper]</a>&emsp;
 </p>
 
@@ -17,7 +17,7 @@ show PEARL outperforms an existing RBC once, and popular RL baselines in all cas
 much as 31% whilst maintaining thermal comfort
 
 <figure>
-  <img src='/media/emissions.png' width="600"/>
+  <img src='/media/emissions.jpg' width="600"/>
     <figcaption> Top: Cumulative emissions produced by all agents across the (a) Mixed Use, (b) Offices, and (c) Seminar Centre
 environments. Curves represent the mean of 3 runs of the experiment, shaded areas are one standard deviation (too small to see
 in all cases except PPO). Bottom: Mean daily building temperature produced by all agents, the green shaded area illustrates the
