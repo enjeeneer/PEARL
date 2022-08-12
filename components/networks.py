@@ -26,8 +26,8 @@ class ProbMLP(nn.Module):
 
         self.optimizer = optim.Adam(self.parameters(), lr=cfg.alpha)
         self.to(device)
-        self.max_logvar = torch.tensor([np.log(0.25)] * output_dims, dtype=float).to(device)
-        self.min_logvar = torch.tensor([np.log(0.25)] * output_dims, dtype=float).to(device)
+        self.max_logvar = torch.tensor([np.log(2)] * output_dims, dtype=float).to(device)
+        self.min_logvar = torch.tensor([np.log(0.5)] * output_dims, dtype=float).to(device)
         self.mu_lower_bound = mu_lower_bound
         self.mu_upper_bound = mu_upper_bound
 
@@ -51,8 +51,7 @@ class ProbMLP(nn.Module):
         for i, mean in enumerate(mean_pred):
             dist = MultivariateNormal(loc=mean, covariance_matrix=torch.diag(var_pred[i]))
             l = -dist.log_prob(observation[i])
-            loss = torch.minimum(l, -torch.log(torch.tensor(1e-12)))
-            losses.append(loss)
+            losses.append(l)
 
         return sum(losses)
 
