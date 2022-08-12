@@ -69,7 +69,7 @@ if __name__ == '__main__':
             wandb.log(merged_data)
 
             # exploration phase update
-            if (agent.n_steps < steps_per_day) and (agent.n_steps % agent.cfg.batch_size == 0):
+            if (agent.n_steps <= agent.cfg.exploration_steps) and (agent.n_steps > cfg.window):
                 model_loss = agent.learn()
                 learn_iters += 1
 

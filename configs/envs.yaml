@@ -119,7 +119,7 @@ SeminarcenterThermal:
         'Bd_CO2',
         'Bd_Pw_All',
         'Fa_Pw_Pur',
-        'Fa_Pw_HVAC',
+        'Fa_Pw_All',
     ]
 
     redundant_actions: 'Grid_CO2_sp'
@@ -168,7 +168,7 @@ SeminarcenterThermal:
         'Z22_T',  # zone 22 temperature
     ]
 
-    energy_reward: 'Fa_Pw_All' # building power consumption
+    energy_reward: 'Fa_Pw_HVAC' # building power consumption
     c02_reward: 'Grid_CO2'
     weather: "DNK_MJ_Horsens1"
     mins_per_step: 10
