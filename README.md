@@ -44,8 +44,8 @@ If you found this work useful, or you use this project to inform your own resear
 ```commandline
 @article{jeen2022,
   url = {https://arxiv.org/abs/2206.14191},
-  author = {Jeen, Scott R. and Cullen, Jonathan M.},  
-  title = {Low Emissiong Building Control with Zero Shot Reinforcement Learning},
+  author = {Jeen, Scott R. and Abate, Alessandro and Cullen, Jonathan M.},  
+  title = {Low Emission Building Control with Zero Shot Reinforcement Learning},
   publisher = {arXiv},
   year = {2022},
 }
