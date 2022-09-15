@@ -29,7 +29,7 @@ target temperature range [19, 24]. </figcaption>
 First you'll need to install [Energym](https://github.com/bsl546/energym) for running the building energy simulations atop
  _EnergyPlus_. The full installation instructions can be found on their website [here](https://bsl546.github.io/energym-pages/sources/install_min.html).
 
-Then you can install the required dependencies vai `conda`:
+Then you can install the required dependencies via `conda`:
 ```commandline
 conda env create --file env.yaml
 conda activate PEARL
