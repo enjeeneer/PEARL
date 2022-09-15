@@ -51,6 +51,9 @@ If you found this work useful, or you use this project to inform your own resear
 }
 ```
 
+## License 
+This work licensed under CC-BY-NC, see `LICENSE.md` for further details.
+
 
 
 
