@@ -21,9 +21,11 @@ def parse_cfg(agent_cfg_path: str, env_cfg_path: str, env_name: str) -> Union[Di
         base.c02_carbon_col = 'carbon_intensity_avg'
         base.c02_low = float(cO2_data[base.c02_carbon_col].sort_values(ascending=True).values[0])
         base.c02_high = float(cO2_data[base.c02_carbon_col].sort_values(ascending=True).values[-1])
+        base.mins_per_step = 15
 
     elif env_name == "SeminarcenterThermostat-v0":
         base.merge_with(env.SeminarcenterThermal)
+        base.mins_per_step = 10
 
     elif env_name == 'OfficesThermostat-v0':
         base.merge_with(env.Offices)
@@ -36,5 +38,6 @@ def parse_cfg(agent_cfg_path: str, env_cfg_path: str, env_name: str) -> Union[Di
         base.c02_carbon_col = 'carbon_intensity_avg'
         base.c02_low = cO2_data[base.c02_carbon_col].sort_values(ascending=True).values[0]
         base.c02_high = cO2_data[base.c02_carbon_col].sort_values(ascending=True).values[-1]
+        base.mins_per_step = 15
 
     return base

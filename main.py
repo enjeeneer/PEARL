@@ -39,16 +39,12 @@ if __name__ == '__main__':
         emissions = []
         temps = []
 
-        prev_action = agent.normaliser.revert_actions(
-            np.random.uniform(low=-1, high=1,
-                              size=agent.act_dim))  # dummy variable for action selection at first timestep
-
         obs = env.get_output()
         if agent.cfg.include_grid:
             obs = agent.add_c02(obs)
         score = 0
         for i in tqdm(range(sim_steps)):
-            action_dict, state_action, last_obs = agent.plan(obs, env, prev_action)
+            action_dict, state_action, last_obs = agent.plan(obs, env)
             obs_ = env.step(action_dict)
             if agent.cfg.include_grid:
                 obs_ = agent.add_c02(obs_)
@@ -97,6 +93,6 @@ if __name__ == '__main__':
                 score = 0
 
             obs = obs_
-            prev_action = action_dict
+
         run.finish()
         env.close()
